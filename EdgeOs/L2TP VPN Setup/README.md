@@ -73,3 +73,7 @@ and
 ```
 show vpn ipsec sa
 ```
+
+Compiled these commands from 
+- https://help.ubnt.com/hc/en-us/articles/204950294-EdgeRouter-L2TP-IPsec-VPN-Server
+- https://community.ubnt.com/t5/EdgeRouter/Edgemax-L2TP-Server-Setup-For-Client-Use/td-p/891812
