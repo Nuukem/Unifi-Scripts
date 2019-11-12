@@ -5,9 +5,9 @@
 - Connect to the router via SSH and run the following commands.
 - Be sure to change the `client-ip-pool` below.
 - Also update the username and password values below for
-- - PUT-PRE-SHARED-KEY-HERE
-- - PUT-USERNAME-HERE
-- - PUT-USER-PASSWORD-HERE
+    - PUT-PRE-SHARED-KEY-HERE
+    - PUT-USERNAME-HERE
+    - PUT-USER-PASSWORD-HERE
 
 ```
 configure
