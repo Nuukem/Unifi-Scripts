@@ -38,24 +38,24 @@ set firewall name WAN_LOCAL rule 60 protocol udp
 
 set vpn l2tp remote-access ipsec-settings authentication mode pre-shared-secret
 
-<font color="#17579f"># update pre-shared-secret here.</font>
+# update pre-shared-secret here.
 set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret <b>PUT-PRE-SHARED-KEY-HERE</b>
 set vpn l2tp remote-access authentication mode local
 
-<font color="#17579f"># update username and password here</font>
+# update username and password here
 set vpn l2tp remote-access authentication local-users username <b>PUT-USERNAME-HERE</b> password '<b>PUT-USER-PASSWORD-HERE</b>'
 
-<font color="#17579f"># update the client-ip-pool here</font>
+# update the client-ip-pool here
 set vpn l2tp remote-access client-ip-pool start <b>192.168.1.240</b>
 set vpn l2tp remote-access client-ip-pool stop <b>192.168.1.244</b>
 
 set vpn l2tp remote-access dns-servers server-1 8.8.8.8
 set vpn l2tp remote-access dns-servers server-2 8.8.4.4
 
-<font color="#17579f"># address of the WAN interface</font>
+# address of the WAN interface
 set vpn l2tp remote-access dhcp-interface <b>eth0</b>
 
-<font color="#17579f"># address of the WAN interface</font>
+# address of the WAN interface
 set vpn ipsec ipsec-interfaces interface <b>eth0</b>
 
 set vpn ipsec auto-firewall-nat-exclude disable
