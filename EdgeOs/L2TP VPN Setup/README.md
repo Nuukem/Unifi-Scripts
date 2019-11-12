@@ -1,6 +1,6 @@
-### WARNING: While I've made every effort to ensure these scripts work properly on my test device, use of these scripts are at your own risk. I will not be held liable for any damages caused directly/indirectly by their usage.
+#### WARNING: While I've made every effort to ensure these scripts work properly on my test device, use of these scripts are at your own risk. I will not be held liable for any damages caused directly/indirectly by their usage.
 
-# VPN L2TP Setup on EdgeRouter (EdgeOS)
+## VPN L2TP Setup on EdgeRouter (EdgeOS)
 
 - Connect to the router via SSH and run the following commands.
 - Be sure to change the `client-ip-pool` below.
@@ -9,7 +9,7 @@
     - PUT-USERNAME-HERE
     - PUT-USER-PASSWORD-HERE
 
-```
+```markdown
 configure
 
 set firewall name WAN_LOCAL rule 30 action accept
@@ -39,12 +39,11 @@ set firewall name WAN_LOCAL rule 60 protocol udp
 set vpn l2tp remote-access ipsec-settings authentication mode pre-shared-secret
 
 # update pre-shared-secret here.
-set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret PUT-PRE-SHARED-KEY-HERE
-
+set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret __PUT-PRE-SHARED-KEY-HERE__
 set vpn l2tp remote-access authentication mode local
 
 # update username and password here
-set vpn l2tp remote-access authentication local-users username PUT-USERNAME-HERE password 'PUT-USER-PASSWORD-HERE'
+set vpn l2tp remote-access authentication local-users username __PUT-USERNAME-HERE__ password '__PUT-USER-PASSWORD-HERE__'
 
 # update the client-ip-pool here
 set vpn l2tp remote-access client-ip-pool start 192.168.1.240
@@ -64,4 +63,13 @@ set vpn l2tp remote-access ipsec-settings ike-lifetime 3600
 
 commit
 save
+```
+
+## These commands can be run to show connected users
+```
+show vpn remote-access 
+```
+and
+```
+show vpn ipsec sa
 ```
