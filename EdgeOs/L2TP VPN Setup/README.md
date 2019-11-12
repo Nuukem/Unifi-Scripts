@@ -9,7 +9,7 @@
     - PUT-USERNAME-HERE
     - PUT-USER-PASSWORD-HERE
 
-```markdown
+<pre>
 configure
 
 set firewall name WAN_LOCAL rule 30 action accept
@@ -38,32 +38,32 @@ set firewall name WAN_LOCAL rule 60 protocol udp
 
 set vpn l2tp remote-access ipsec-settings authentication mode pre-shared-secret
 
-# update pre-shared-secret here.
-set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret __PUT-PRE-SHARED-KEY-HERE__
+<font color="#17579f"># update pre-shared-secret here.</font>
+set vpn l2tp remote-access ipsec-settings authentication pre-shared-secret <b>PUT-PRE-SHARED-KEY-HERE</b>
 set vpn l2tp remote-access authentication mode local
 
-# update username and password here
-set vpn l2tp remote-access authentication local-users username __PUT-USERNAME-HERE__ password '__PUT-USER-PASSWORD-HERE__'
+<font color="#17579f"># update username and password here</font>
+set vpn l2tp remote-access authentication local-users username <b>PUT-USERNAME-HERE</b> password '<b>PUT-USER-PASSWORD-HERE</b>'
 
-# update the client-ip-pool here
-set vpn l2tp remote-access client-ip-pool start 192.168.1.240
-set vpn l2tp remote-access client-ip-pool stop 192.168.1.244
+<font color="#17579f"># update the client-ip-pool here</font>
+set vpn l2tp remote-access client-ip-pool start <b>192.168.1.240</b>
+set vpn l2tp remote-access client-ip-pool stop <b>192.168.1.244</b>
 
 set vpn l2tp remote-access dns-servers server-1 8.8.8.8
 set vpn l2tp remote-access dns-servers server-2 8.8.4.4
 
-# address of the WAN interface
-set vpn l2tp remote-access dhcp-interface eth0
+<font color="#17579f"># address of the WAN interface</font>
+set vpn l2tp remote-access dhcp-interface <b>eth0</b>
 
-# address of the WAN interface
-set vpn ipsec ipsec-interfaces interface eth0
+<font color="#17579f"># address of the WAN interface</font>
+set vpn ipsec ipsec-interfaces interface <b>eth0</b>
 
 set vpn ipsec auto-firewall-nat-exclude disable
 set vpn l2tp remote-access ipsec-settings ike-lifetime 3600
 
 commit
 save
-```
+</pre>
 
 ## These commands can be run to show connected users
 ```
